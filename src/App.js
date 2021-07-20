@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import DataContainer from './components/DataContainer';
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
         <h1>Hello World</h1>
         <p>
           Edit <code>src/App.js</code> and save to reload.
+
         </p>
+        < DataContainer />
         <a
           className="App-link"
           href="https://reactjs.org"
