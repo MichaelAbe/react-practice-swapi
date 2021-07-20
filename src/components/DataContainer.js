@@ -6,16 +6,20 @@ export default function DataContainer() {
     const [data, setData] = useState('')
     
     useEffect(() => {
-        fetch('https://swapi.dev/api/people/1')
+        fetch('https://swapi.dev/api/people')
         .then( resp => resp.json()
         .then(data => setData(data)))
     }, [])
 
+    const mapChar = () => {
+        return data.results.map(person => < Data name =  {person.name} /> )
+    }
+
     return (
         <div>
             <h1>This is the data component</h1>
-            <h3>{data.name} </h3>
-            < Data birth_year = {data.birth_year} />
+            {console.log(data)}
+            { mapChar() }
         </div>
     )
 }
