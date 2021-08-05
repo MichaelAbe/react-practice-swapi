@@ -15,7 +15,7 @@ export default function DataContainer() {
     }, [])
 
     const mapChar = () => {
-        return data.results.map(person => < Data name =  {person.name} birth_year = {person.birth_year} /> )
+        return data.results.map(person => < Data name =  {person.name} birth_year = {person.birth_year} key = {person.url} /> )
     }
 
     return (
